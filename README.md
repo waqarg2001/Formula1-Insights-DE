@@ -16,7 +16,7 @@
   <a href="#overview">Overview</a> •
   <a href="#tools">Tools</a> •
   <a href="#architecture">Architecture</a> •
-  <a href="#erd">Demo</a> •
+  <a href="#erd">ERD</a> •
   <a href="#support">Support</a> •
   <a href="#license">License</a>
 </p>
