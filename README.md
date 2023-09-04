@@ -16,7 +16,7 @@
   <a href="#overview">Overview</a> •
   <a href="#tools">Tools</a> •
   <a href="#architecture">Architecture</a> •
-  <a href="#demo">Demo</a> •
+  <a href="#erd">Demo</a> •
   <a href="#support">Support</a> •
   <a href="#license">License</a>
 </p>
@@ -37,7 +37,6 @@ The repository directory structure is as follows:
 | 
 ├── Transformations         <- Scripts to aggregate and transform data
 │  
-│ 
 ├── analysis         <- Basic analysis of data from the transformations folder.  
 | 
 │ 
@@ -75,18 +74,17 @@ To build this project, the following tools were used:
 The architecture of this project is inspired by the following, taken from Azure Architecture Center.
 
 <p align='center'>
-  <img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/arch.png' height=450 width=550>
+  <img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/arch.png' height=470 width=600>
 </p>  
 
 
 
-## Demo
+## ERD
 
-The figure below shows a snapshot of ETL process being conducted through terminal. Type run.py (raw data directory).
-(figure may take few seconds to load)
+The database structure is shown in the following ER Diagram and explained in the <a href='http://ergast.com/docs/f1db_user_guide.txt' >Database User Guide</a>.
 
 <p>
-  <img src='https://github.com/waqarg2001/PakWheels-Data-Analysis/blob/b195a77dc208fe9c668df46433f213108ae63008/resources/pakwheels%20etl.gif' width=900 height=300>
+  <img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/erd.png' width=600 height=470>
 </p>  
 
 
