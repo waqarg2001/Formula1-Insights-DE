@@ -1,10 +1,10 @@
 <p align='center'>
-<img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/image.png' width=600 height=250 >
+<img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/image.png' width=600 height=300 >
 </p>
 
 ---
 
-<h4 align='center'> Application of ETL process on raw used cars dataset scraped from <a href='https://pakwheels.com/' target='_blank'>PakWheels</a> along with its analysis using <a href='jupyter.org' target='_blank'>Jupyter</a> Notebook. </h4>
+<h4 align='center'> Utilisation of <a href='https://azure.microsoft.com/en-us' target='_blank'>Azure Cloud Services</a> to architect and orchestrate data pipeline to perform ETL on Formula 1 racing dataset extracted from <a href='https://ergast.com/mrd/'>Ergast Developer API.</a> </h4>
 
 <p align='center'>
 <img src="https://i.ibb.co/KxfMMsP/built-with-love.png" alt="built-with-love" border="0">
@@ -24,57 +24,61 @@
 
 ## Overview
 
-<p><a href='pakwheels.com' target='_blank'>PakWheels</a> is the largest online marketplace for car shoppers and sellers in Pakistan. It aggregates thousands of new, used, and certified second-hand cars from thousands of dealers and private sellers.</p>
+<p>The Ergast Developer API is an experimental web service that provides a historical record of motor racing data for non-commercial purposes. The API provides data for the Formula One series, from the beginning of the world championships in 1950 until now.</p>
 
-This project involves Extract Transform Load(ETL) process on used and new cars dataset which was scraped from PakWheels . Exploratory Data Analysis(EDA) is performed on it using Jupyter Notebook to extract key insights about the Pakistan's used cars marketplace.
+This project showcases a seamless data journey facilitated by Azure services. It begins with data extraction from the Ergast Developer API and harnesses Azure components such as Azure Active Directory, Service Principal, Azure Databricks, Key Vault, Azure Data Factory, and Azure Data Lake Gen2 to orchestrate this process efficiently. Within Azure Databricks, powered by Apache Spark, data undergoes the ETL (Extract, Transform, Load) process. The data begins its journey in the 'ingestion' folder, where it is initially received. It then proceeds to the 'transformations' folder, where it is refined and enhanced. Finally, the data finds its destination in the 'analysis' folder, where it is carefully organized and prepared for analysis. The orchestration of this data journey is managed through Azure Data Factory, representing a structured and efficient approach to data engineering and analysis.
 
 The repository directory structure is as follows:
 
 ```
-├── LICENSE 
 ├── README.md          <- The top-level README for developers using this project. 
 | 
-├── run.py             <- Python script to start ETL process. 
+├── Raw           <- Contains script to define table schemas
 | 
-├── data 
-│   ├── processed      <- The final, canonical data set for analysis.
-│   └── raw            <- The original, immutable data dump. 
+├── Transformations         <- Scripts to aggregate and transform data
+│  
 │ 
-│ 
-│ 
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-mwg-initial-data-exploration`.  
+├── analysis         <- Basic analysis of data from the transformations folder.  
 | 
 │ 
-├── src                <- Source code for use in this project. 
-│   ├── __init__.py    <- Makes src a Python module. 
+├── include                <- Configuration folder 
+│   ├── common_functions.py    <- Common functions used throughout the ETL process.
 │   │ 
-│   ├── data           <- Script to perform ETL. 
-│       └── make_dataset.py 
+│   ├── configuration.py       <- Houses configuration settings such as variables.
+│      
 |         
 |
-├── resources          <- Resources for this readme file. 
+├── ingestion          <- Ingestion scripts for data files from ADLS Gen 2.
+│      
+├── resources          <- Resources for readme file.
+|
+├── set-up             <- Script for mounting ADLS Gen 2 to Databricks
+|         
+├── utils              <- SQL scripts for incremental load.
 ```
 
 ## Tools 
 
-To build this project, following tools were used:
+To build this project, the following tools were used:
 
-- Python
-- PyCharm
-- Github
-- Jupyter Notebook
+- Azure Databricks
+- Azure KeyVault
+- Azure Active Directory
+- Azure DataLake Gen 2
+- Azure Data Factory
+- Pyspark
+- SQL
+- Git
 
 ## Architecture
 
-The architecture of this project is straightforward which can be understood by the following diagram.
+The architecture of this project is inspired by the following, taken from Azure Architecture Center.
 
 <p align='center'>
   <img src='https://github.com/waqarg2001/PakWheels-Data-Analysis/blob/7b23ca6ab3df0c13053a73f5a91e5544becd2ff0/resources/architecture.gif' height=280 width=900>
 </p>  
 
-According to the diagram we first create a python script which performs ETL for us on the raw dataset. The output of this process is clean data which is then used for exploratory analysis in Jupyter Notebook.
+According to the diagram we first create a python script that performs ETL for us on the raw dataset. The output of this process is clean data which is then used for exploratory analysis in Jupyter Notebook.
 
 
 ## Demo
