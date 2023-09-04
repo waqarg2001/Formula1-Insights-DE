@@ -83,7 +83,7 @@ The architecture of this project is inspired by the following, taken from Azure 
 
 The database structure is shown in the following ER Diagram and explained in the <a href='http://ergast.com/docs/f1db_user_guide.txt' >Database User Guide</a>.
 
-<p>
+<p align='center'>
   <img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/erd.png' width=600 height=470>
 </p>  
 
