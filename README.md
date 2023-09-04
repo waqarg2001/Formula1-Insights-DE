@@ -75,10 +75,9 @@ To build this project, the following tools were used:
 The architecture of this project is inspired by the following, taken from Azure Architecture Center.
 
 <p align='center'>
-  <img src='https://github.com/waqarg2001/PakWheels-Data-Analysis/blob/7b23ca6ab3df0c13053a73f5a91e5544becd2ff0/resources/architecture.gif' height=280 width=900>
+  <img src='https://github.com/waqarg2001/Formula1-Insights-DE/blob/master/resources/arch.png' height=450 width=550>
 </p>  
 
-According to the diagram we first create a python script that performs ETL for us on the raw dataset. The output of this process is clean data which is then used for exploratory analysis in Jupyter Notebook.
 
 
 ## Demo
